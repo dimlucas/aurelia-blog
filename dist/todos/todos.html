@@ -1,0 +1,17 @@
+<template>
+    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <th>To-do</th>
+                <th>Status</th>
+            </thead>
+            <tr repeat.for="todo of todos">
+                <td>${todo.title}</td>
+                <td>${todo.completed ? 'Done' : 'Pending'}</td>
+            </tr>
+        </table>
+    </div>
+    
+</template>
