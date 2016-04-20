@@ -1,10 +1,14 @@
 import {Router, RouterConfiguration} from 'aurelia-router'
+import {AuthorizeStep} from 'aurelia-auth';
 
 export class App {
   router: Router;
   
   configureRouter(config: RouterConfiguration, router: Router) {
     config.title = 'Aurelia';
+    
+    config.addPipelineStep('authorize', AuthorizeStep);
+    
     config.map([
         { 
             route: ['', 'start-page'], //This page will be shown as the root or start page of our application ('') or on explicit navigation to '/start-page'

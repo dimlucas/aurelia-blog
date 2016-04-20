@@ -12,6 +12,8 @@ define(["require", "exports", 'aurelia-framework', 'aurelia-router'], function (
     var NavBar = (function () {
         function NavBar() {
         }
+        NavBar.prototype.attached = function () {
+        };
         __decorate([
             aurelia_framework_1.bindable, 
             __metadata('design:type', aurelia_router_1.Router)
@@ -25,4 +27,4 @@ define(["require", "exports", 'aurelia-framework', 'aurelia-router'], function (
     exports.NavBar = NavBar;
 });
 //# sourceMappingURL=nav-bar.js.map
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmF2LWJhci9uYXYtYmFyLmpzIiwic291cmNlUm9vdCI6Ii9zcmMiLCJzb3VyY2VzIjpbIm5hdi1iYXIvbmF2LWJhci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztJQUtBO1FBQUE7UUFJQSxDQUFDO1FBREc7WUFBQyw0QkFBUTs7OENBQUE7UUFKYjtZQUFDLGlDQUFhLENBQUMsU0FBUyxDQUFDOztrQkFBQTtRQUt6QixhQUFDO0lBQUQsQ0FBQyxBQUpELElBSUM7SUFKWSxjQUFNLFNBSWxCLENBQUEifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmF2LWJhci9uYXYtYmFyLmpzIiwic291cmNlUm9vdCI6Ii9zcmMiLCJzb3VyY2VzIjpbIm5hdi1iYXIvbmF2LWJhci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztJQUtBO1FBQUE7UUFPQSxDQUFDO1FBTEcseUJBQVEsR0FBUjtRQUVBLENBQUM7UUFFRDtZQUFDLDRCQUFROzs4Q0FBQTtRQVBiO1lBQUMsaUNBQWEsQ0FBQyxTQUFTLENBQUM7O2tCQUFBO1FBUXpCLGFBQUM7SUFBRCxDQUFDLEFBUEQsSUFPQztJQVBZLGNBQU0sU0FPbEIsQ0FBQSJ9

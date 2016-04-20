@@ -1,11 +1,15 @@
 import 'bootstrap';
 import {Aurelia} from 'aurelia-framework';
+import config from './auth/auth-config';
 
 export function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
-    .plugin('aurelia-dialog');
+    .plugin('aurelia-dialog')
+    .plugin('aurelia-auth', (baseConfig) => {
+        baseConfig.configure(config);
+    });
 
   //Uncomment the line below to enable animation.
   //aurelia.use.plugin('aurelia-animator-css');

@@ -5,6 +5,9 @@ import {Router} from 'aurelia-router';
 @customElement('nav-bar')
 export class NavBar{
     
+    attached() {
+        
+    }
         
     @bindable router: Router;
 }
