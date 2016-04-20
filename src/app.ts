@@ -14,7 +14,9 @@ export class App {
             title: 'Welcome' //Optional title, will be displayed as part of the document's title
         },
         { route: 'todos', name: 'todos', moduleId: './todos/todos', nav: true, title: 'To-Do List' },
-        { route: 'login', name: 'login', moduleId: './auth/login', nav: true, title: 'Login' }
+        { route: 'login', name: 'login', moduleId: './auth/login', nav: true, title: 'Login' },
+        { route: 'view-info', name: 'view-info', moduleId: './user-info/view-info', nav: true, title: 'View Personal Information' },
+        { route: 'set-info', name: 'set-info', moduleId: './user-info/set-info', nav: true, title: 'Update Personal Information' }
     ]);
 
     this.router = router;
