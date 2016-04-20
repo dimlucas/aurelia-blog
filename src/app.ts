@@ -13,7 +13,8 @@ export class App {
             nav: false,  //Specifies whether the page will be included in the navigation model (e.g. visible in the navigation bar) or not
             title: 'Welcome' //Optional title, will be displayed as part of the document's title
         },
-        { route: 'todos', name: 'todos', moduleId: './todos/todos', nav: true, title: 'To-Do List' }
+        { route: 'todos', name: 'todos', moduleId: './todos/todos', nav: true, title: 'To-Do List' },
+        { route: 'login', name: 'login', moduleId: './auth/login', nav: true, title: 'Login' }
     ]);
 
     this.router = router;
