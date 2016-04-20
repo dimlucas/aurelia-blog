@@ -16,7 +16,8 @@ export class App {
         { route: 'todos', name: 'todos', moduleId: './todos/todos', nav: true, title: 'To-Do List' },
         { route: 'login', name: 'login', moduleId: './auth/login', nav: true, title: 'Login' },
         { route: 'view-info', name: 'view-info', moduleId: './user-info/view-info', nav: true, title: 'View Personal Information' },
-        { route: 'set-info', name: 'set-info', moduleId: './user-info/set-info', nav: true, title: 'Update Personal Information' }
+        { route: 'set-info', name: 'set-info', moduleId: './user-info/set-info', nav: true, title: 'Update Personal Information' },
+        { route: 'dialog-demo', name: 'dialog-demo', moduleId: './dialog-demo/dialog-demo', nav: true, title: 'Dialog Demo' }
     ]);
 
     this.router = router;
