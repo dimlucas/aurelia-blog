@@ -23,7 +23,8 @@ export class App {
         { route: 'set-info', name: 'set-info', moduleId: './user-info/set-info', nav: true, title: 'Update Personal Information' },
         { route: 'dialog-demo', name: 'dialog-demo', moduleId: './dialog-demo/dialog-demo', nav: true, title: 'Dialog Demo' },
         { route: 'html-demo', name: 'html-demo', moduleId: './html-only-demo/html-only-demo', nav: true, title: 'HTML Only Elements' },
-        { route: 'contacts-demo', name: 'contacts-demo', moduleId: './contacts-demo/contacts-demo', nav: true, title: 'Contacts Demo' }
+        { route: 'contacts-demo', name: 'contacts-demo', moduleId: './contacts-demo/contacts-demo', nav: true, title: 'Contacts Demo' },
+        { route: 'jquery-usage', name: 'jquery-usage', moduleId: './jquery-usage/jquery-usage', nav: true, title: 'jQuery' }
     ]);
 
     this.router = router;
