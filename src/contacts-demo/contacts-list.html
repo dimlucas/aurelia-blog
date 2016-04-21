@@ -1,0 +1,20 @@
+<template>
+    
+    <table class="table">
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </thead>
+        <tbody>
+            <tr repeat.for="contact of contactsList">
+                <td>${contact.firstName}</td>
+                <td>${contact.lastName}</td>
+                <td>${contact.email}</td>
+                <td>${contact.phone}</td>
+            </tr>
+        </tbody>
+    </table>
+        
+</template>

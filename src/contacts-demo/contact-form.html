@@ -1,0 +1,29 @@
+<template>
+    
+    <form action="">
+        <div class.bind="firstNameDiv">
+            <input id="first-name" type="text" class="form-control" value.bind="firstName" placeholder="First Name" focusout.trigger="checkFirstName()">
+            <label if.bind="firstNameErr" for="first-name" class="control-label">${firstNameLbl}</label>
+        </div>
+        
+        <div class.bind="lastNameDiv">
+            <input id="last-name" type="text" class="form-control" value.bind="lastName" placeholder="Last Name" focusout.trigger="checkLastName()">
+            <label if.bind="lastNameErr" for="last-name" class="control-label">${lastNameLbl}</label>
+        </div>
+        
+        <div class.bind="emailDiv">
+            <input id="email" type="email" class="form-control" value.bind="email" placeholder="Email" focusout.trigger="checkEmail()">
+            <label if.bind="emailErr" for="email" class="control-label">${emailLbl}</label>
+        </div>
+        
+        <div class.bind="phoneDiv">
+            <input type="text" id="phone" class="form-control" value.bind="phone" placeholder="Phone Number" focusout.trigger="checkPhone()">
+            <label for="phone" class="control-label" if.bind="phoneErr">${phoneLbl}</label>
+        </div>
+        
+        <div class="form-group">
+            <button class="btn btn-primary" click.trigger="save()">Save</button>
+        </div>
+    </form>
+    
+</template>
