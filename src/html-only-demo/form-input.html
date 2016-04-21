@@ -1,0 +1,6 @@
+<template bindable="inputValue">
+    <div class="form-group">
+        <input type="text" class="form-control" value.bind="inputValue"> <!--Note that this binding defaults to two-way-->
+        <label for="">${inputValue}</label>     <!--That means that any changes in the above input element will affect the contents of this label by default-->
+    </div>
+</template>

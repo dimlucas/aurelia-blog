@@ -1,0 +1,15 @@
+<template>
+    <require from="./form-input.html"></require>
+    <div class="col-md-6">
+        <h2 class="text-center">Code in the view</h2>
+        <!--Notice that I am essentially copying the form element's contents here-->
+        <div class="form-group">
+            <input type="text" class="form-control" value.bind="email">
+            <label for="">${email}</label>            
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2 class="text-center">HTML-Only Custom Element</h2>
+        <form-input input-value.two-way="email"></form-input>
+    </div>
+</template>
