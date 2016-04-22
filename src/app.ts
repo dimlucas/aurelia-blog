@@ -24,7 +24,8 @@ export class App {
         { route: 'dialog-demo', name: 'dialog-demo', moduleId: './dialog-demo/dialog-demo', nav: true, title: 'Dialog Demo' },
         { route: 'html-demo', name: 'html-demo', moduleId: './html-only-demo/html-only-demo', nav: true, title: 'HTML Only Elements' },
         { route: 'contacts-demo', name: 'contacts-demo', moduleId: './contacts-demo/contacts-demo', nav: true, title: 'Contacts Demo' },
-        { route: 'jquery-usage', name: 'jquery-usage', moduleId: './jquery-usage/jquery-usage', nav: true, title: 'jQuery' }
+        { route: 'jquery-usage', name: 'jquery-usage', moduleId: './jquery-usage/jquery-usage', nav: true, title: 'jQuery' },
+        { route: 'users', name: 'users', moduleId: './multiple-views/users', nav: true, title: 'Users(Multi Views)' }
     ]);
 
     this.router = router;

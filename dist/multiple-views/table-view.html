@@ -1,0 +1,23 @@
+<template>
+    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Website</th>
+            </thead>
+            <tbody>
+                <tr repeat.for="user of users">
+                    <td>${user.name}</td>
+                    <td>${user.username}</td>
+                    <td>${user.email}</td>
+                    <td>${user.website}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</template>
