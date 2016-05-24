@@ -1,0 +1,34 @@
+<template>
+    <div class="col-md-8 col-md-offset-2">
+        <form action="" submit.trigger="signUp()">
+            <div class.bind="firstNameDiv">
+                <input type="text" class="form-control" value.bind="firstName" placeholder.bind="firstNamePlaceholder" blur.trigger="validateFirstName()">
+                <label class="control-label" if.bind="firstNameErr">${firstNameLbl}</label>
+            </div>
+            <div class.bind="lastNameDiv">
+                <input type="text" class="form-control" value.bind="lastName" placeholder.bind="lastNamePlaceholder" blur.trigger="validateLastName()">
+                <label class="control-label" if.bind="lastNameErr">${lastNameLbl}</label>
+            </div>
+            <div class.bind="emailDiv">
+                <input type="text" class="form-control" value.bind="email" placeholder.bind="emailPlaceholder" blur.trigger="validateEmail()">
+                <label class="control-label" if.bind="emailErr">${emailLbl}</label>
+            </div>
+            <div class.bind="passwordDiv">
+                <input type="password" class="form-control" value.bind="password" placeholder.bind="passwordPlaceholder" blur.trigger="validatePassword()">
+                <label class="control-label" if.bind="passwordErr">${passwordLbl}</label>
+            </div>
+            <div class.bind="confPasswordDiv">
+                <input type="password" class="form-control" value.bind="confPassword" placeholder.bind="confPasswordPlaceholder" blur.trigger="validateConfPassword()">
+                <label class="control-label" if.bind="confPasswordErr">${confPasswordLbl}</label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" checked.bind="tosBox" required> I Agree to the Terms & Conditions
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</template>
