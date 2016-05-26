@@ -1,0 +1,72 @@
+<template>
+
+    <div class="col-md-8 col-md-offset-2">
+        <form action="">
+            <!--Text Input-->
+            <div class="form-group">
+                <h3>Text Input</h3>
+                <input type="text" placeholder="Text Input" class="form-control" value.bind="name">
+                <label>Your name is: ${name}</label>
+            </div>
+            
+            <!--Checkboxes-->
+            <div class="form-group">
+                <h3>Checkboxes</h3>
+                <div class="checkbox" repeat.for="movie of movies">
+                    <label for.bind="movie.id">
+                        <input type="checkbox" id.bind="movie.id" checked.bind="movie.selected">
+                        ${movie.label}
+                    </label>
+                </div>
+                <label>
+                    Your favorite movie genres:
+                    <span repeat.for="movie of movies">
+                        <!--Only print the labels of movie genres that have been selected-->
+                        ${movie.selected ? movie.label : ''}
+                        <span if.bind="movie.selected"> </span>
+                    </span>
+                </label>
+            </div>
+
+            <!--Radio Buttons-->
+            <div class="form-group">
+                <h3>Radio Buttons</h3>
+                <div class="radio" repeat.for="gender of genders">
+                    <label for.bind="gender.id">
+                        <input type="radio" id.bind="gender.id" name.bind="genderRadioGroup" value.bind="gender.value" checked.bind="selectedGender">
+                        ${gender.label}
+                    </label>
+                </div>
+                <label>Selected Radio Button: ${genders[selectedGender].label}</label>
+            </div>
+
+           <!--Dropdown-->
+           <div class="form-group">
+               <h3>Dropdown</h3>
+                <select class="form-control" value.bind="selectedColor">
+                    <option>Select your favorite color...</option>
+                    <option repeat.for="color of colors" value.bind="color.value">
+                        ${color.label}
+                    </option>
+                </select>
+               <label>Selected option: ${colors[selectedColor].label}</label>
+           </div>
+           
+           <!--Multi-Select-->
+           <div class="form-group">
+               <h3>Select Multiple Options</h3>
+               <select class="form-control" value.bind="selectedColors" multiple>
+                   <option repeat.for="color of multipleColors" value.bind="color.value">${color.label}</option>
+               </select>
+               <label>
+                   Selected Colors:
+                   <span repeat.for="color of selectedColors">
+                       ${multipleColors[color].label}  
+                   </span>
+               </label>
+           </div>
+
+        </form>
+    </div>
+
+</template>
