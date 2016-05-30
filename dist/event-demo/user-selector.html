@@ -1,0 +1,7 @@
+<template>
+    <select class="form-control" value.bind="selectedUser">
+        <option repeat.for="user of users" model.bind="user">
+            ${user.name}
+        </option>
+    </select>
+</template>

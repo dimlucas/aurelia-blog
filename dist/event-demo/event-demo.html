@@ -1,0 +1,12 @@
+<template>
+    <require from="./user-selector"></require>
+    <require from="./user-details"></require>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="row" style="margin-bottom: 8px;">
+            <user-selector users.bind="users" selected-user.two-way="selectedUser"></user-selector>
+        </div>
+        <div class="row">
+            <user-details user-changed-event.bind="userChangedEvent"></user-details>    
+        </div>
+    </div>
+</template>
