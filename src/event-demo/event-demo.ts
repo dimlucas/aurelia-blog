@@ -1,6 +1,6 @@
 import {autoinject} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
-import {UsersService} from '../services/UsersService';
+import {UsersService} from '../services/users-service';
 
 //We use Dependency Injection to inject the UsersService class and an event aggregator
 @autoinject

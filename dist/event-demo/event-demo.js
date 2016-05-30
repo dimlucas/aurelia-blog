@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", 'aurelia-framework', 'aurelia-event-aggregator', '../services/UsersService'], function (require, exports, aurelia_framework_1, aurelia_event_aggregator_1, UsersService_1) {
+define(["require", "exports", 'aurelia-framework', 'aurelia-event-aggregator', '../services/users-service'], function (require, exports, aurelia_framework_1, aurelia_event_aggregator_1, users_service_1) {
     "use strict";
     var EventDemo = (function () {
         function EventDemo(usersService, ea) {
@@ -43,7 +43,7 @@ define(["require", "exports", 'aurelia-framework', 'aurelia-event-aggregator', '
         });
         EventDemo = __decorate([
             aurelia_framework_1.autoinject, 
-            __metadata('design:paramtypes', [UsersService_1.UsersService, aurelia_event_aggregator_1.EventAggregator])
+            __metadata('design:paramtypes', [users_service_1.UsersService, aurelia_event_aggregator_1.EventAggregator])
         ], EventDemo);
         return EventDemo;
     }());
