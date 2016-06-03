@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", 'aurelia-framework', '../services/users-service', 'aurelia-event-aggregator'], function (require, exports, aurelia_framework_1, users_service_1, aurelia_event_aggregator_1) {
+define(["require", "exports", 'aurelia-framework', '../services/users-service', 'aurelia-event-aggregator', './selected-user-changed'], function (require, exports, aurelia_framework_1, users_service_1, aurelia_event_aggregator_1, selected_user_changed_1) {
     "use strict";
     var UserDetailsCustomElement = (function () {
         function UserDetailsCustomElement(usersService, ea) {
@@ -16,8 +16,8 @@ define(["require", "exports", 'aurelia-framework', '../services/users-service', 
         }
         UserDetailsCustomElement.prototype.bind = function () {
             var _this = this;
-            this.ea.subscribe(this.userChangedEvent, function (payload) {
-                _this.fetchUser(payload.id);
+            this.ea.subscribe(selected_user_changed_1.SelectedUserChanged, function (event) {
+                _this.fetchUser(event.id);
             });
         };
         UserDetailsCustomElement.prototype.fetchUser = function (id) {
@@ -26,10 +26,6 @@ define(["require", "exports", 'aurelia-framework', '../services/users-service', 
                 _this.user = data;
             });
         };
-        __decorate([
-            aurelia_framework_1.bindable, 
-            __metadata('design:type', String)
-        ], UserDetailsCustomElement.prototype, "userChangedEvent", void 0);
         UserDetailsCustomElement = __decorate([
             aurelia_framework_1.autoinject, 
             __metadata('design:paramtypes', [users_service_1.UsersService, aurelia_event_aggregator_1.EventAggregator])
@@ -39,4 +35,4 @@ define(["require", "exports", 'aurelia-framework', '../services/users-service', 
     exports.UserDetailsCustomElement = UserDetailsCustomElement;
 });
 //# sourceMappingURL=user-details.js.map
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXZlbnQtZGVtby91c2VyLWRldGFpbHMuanMiLCJzb3VyY2VSb290IjoiL3NyYyIsInNvdXJjZXMiOlsiZXZlbnQtZGVtby91c2VyLWRldGFpbHMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7SUFLQTtRQUVJLGtDQUFvQixZQUEwQixFQUFVLEVBQW1CO1lBQXZELGlCQUFZLEdBQVosWUFBWSxDQUFjO1lBQVUsT0FBRSxHQUFGLEVBQUUsQ0FBaUI7UUFFM0UsQ0FBQztRQUVELHVDQUFJLEdBQUo7WUFBQSxpQkFNQztZQUpHLElBQUksQ0FBQyxFQUFFLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxnQkFBZ0IsRUFBRSxVQUFBLE9BQU87Z0JBRTVDLEtBQUksQ0FBQyxTQUFTLENBQUMsT0FBTyxDQUFDLEVBQUUsQ0FBQyxDQUFDO1lBQy9CLENBQUMsQ0FBQyxDQUFDO1FBQ1AsQ0FBQztRQUVELDRDQUFTLEdBQVQsVUFBVSxFQUFFO1lBQVosaUJBSUM7WUFIRyxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQyxJQUFJLENBQUMsVUFBQSxJQUFJO2dCQUNoQyxLQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztZQUNyQixDQUFDLENBQUMsQ0FBQTtRQUNOLENBQUM7UUFFRDtZQUFDLDRCQUFROzswRUFBQTtRQXJCYjtZQUFDLDhCQUFVOztvQ0FBQTtRQXVCWCwrQkFBQztJQUFELENBQUMsQUF0QkQsSUFzQkM7SUF0QlksZ0NBQXdCLDJCQXNCcEMsQ0FBQSJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXZlbnQtZGVtby91c2VyLWRldGFpbHMuanMiLCJzb3VyY2VSb290IjoiL3NyYyIsInNvdXJjZXMiOlsiZXZlbnQtZGVtby91c2VyLWRldGFpbHMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7SUFNQTtRQUVJLGtDQUFvQixZQUEwQixFQUFVLEVBQW1CO1lBQXZELGlCQUFZLEdBQVosWUFBWSxDQUFjO1lBQVUsT0FBRSxHQUFGLEVBQUUsQ0FBaUI7UUFFM0UsQ0FBQztRQUVELHVDQUFJLEdBQUo7WUFBQSxpQkFNQztZQUpHLElBQUksQ0FBQyxFQUFFLENBQUMsU0FBUyxDQUFDLDJDQUFtQixFQUFFLFVBQUEsS0FBSztnQkFFeEMsS0FBSSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsRUFBRSxDQUFDLENBQUM7WUFDN0IsQ0FBQyxDQUFDLENBQUM7UUFDUCxDQUFDO1FBRUQsNENBQVMsR0FBVCxVQUFVLEVBQUU7WUFBWixpQkFJQztZQUhHLElBQUksQ0FBQyxZQUFZLENBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDLElBQUksQ0FBQyxVQUFBLElBQUk7Z0JBQ2hDLEtBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1lBQ3JCLENBQUMsQ0FBQyxDQUFBO1FBQ04sQ0FBQztRQW5CTDtZQUFDLDhCQUFVOztvQ0FBQTtRQXNCWCwrQkFBQztJQUFELENBQUMsQUFyQkQsSUFxQkM7SUFyQlksZ0NBQXdCLDJCQXFCcEMsQ0FBQSJ9

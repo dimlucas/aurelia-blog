@@ -1,6 +1,7 @@
 import {autoinject,bindable} from 'aurelia-framework';
 import {UsersService} from '../services/users-service';
 import {EventAggregator} from 'aurelia-event-aggregator';
+import {SelectedUserChanged} from './selected-user-changed';
 
 @autoinject 
 export class UserDetailsCustomElement{
@@ -11,9 +12,9 @@ export class UserDetailsCustomElement{
       
     bind(){
         //Attach an event handler that will trigger every time the user changes
-        this.ea.subscribe(this.userChangedEvent, payload => {
+        this.ea.subscribe(SelectedUserChanged, event => {
             //If the selected user has been changed, fetch the user's details from the service
-            this.fetchUser(payload.id);
+            this.fetchUser(event.id);
         });
     }
     
@@ -23,6 +24,5 @@ export class UserDetailsCustomElement{
         })
     }
     
-    @bindable userChangedEvent: string;
     user: any;
 }

@@ -1,6 +1,7 @@
 import {autoinject} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
 import {UsersService} from '../services/users-service';
+import {SelectedUserChanged} from './selected-user-changed';
 
 //We use Dependency Injection to inject the UsersService class and an event aggregator
 @autoinject
@@ -24,8 +25,9 @@ export class EventDemo{
     }
     
     userChanged(): void{
-        let payload = { id: this.selectedUser.id }
-        this.ea.publish(this.userChangedEvent, payload);
+        let event = new SelectedUserChanged();
+        event.id = this.selectedUser.id;
+        this.ea.publish(event);
     }
     
     get selectedUser(): any{
