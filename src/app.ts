@@ -28,7 +28,8 @@ export class App {
         { route: 'users', name: 'users', moduleId: './multiple-views/users', nav: true, title: 'Users(Multi Views)' },
         { route: 'form-demo', name: 'form-demo', moduleId: './form-demo/form-demo', nav: true, title: 'Form Demo' },
         { route: 'form-inputs', name: 'form-inputs', moduleId: './form-inputs/form-inputs', nav: true, title: 'More Form Inputs' },
-        { route: 'event-demo', name: 'event-demo', moduleId: './event-demo/event-demo', nav: true, title: 'Events Demo' }
+        { route: 'event-demo', name: 'event-demo', moduleId: './event-demo/event-demo', nav: true, title: 'Events Demo' },
+        { route: 'users-management', name: 'users', moduleId: 'users/users', nav: true, title: 'Users Management' }
     ]);
 
     this.router = router;
