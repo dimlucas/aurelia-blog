@@ -25,7 +25,7 @@ System.config({
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.1.2.0",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "fetch": "github:github/fetch@0.11.0",
-    "font-awesome": "npm:font-awesome@4.6.1",
+    "font-awesome": "npm:font-awesome@4.6.3",
     "text": "github:systemjs/plugin-text@0.0.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -245,8 +245,8 @@ System.config({
       "isarray": "npm:isarray@0.0.1",
       "object-keys": "npm:object-keys@1.0.9"
     },
-    "npm:font-awesome@4.6.1": {
-      "css": "github:systemjs/plugin-css@0.1.21"
+    "npm:font-awesome@4.6.3": {
+      "css": "github:systemjs/plugin-css@0.1.23"
     },
     "npm:https-browserify@0.0.0": {
       "http": "github:jspm/nodelibs-http@1.7.1"

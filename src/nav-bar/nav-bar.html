@@ -17,7 +17,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li repeat.for="route of router.navigation" class="${row.isActive ? 'active' : ''}">
+                <li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
                     <a href.bind="route.href">${route.title}</a>
                 </li>
             </ul>
