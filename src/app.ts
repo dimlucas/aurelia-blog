@@ -17,21 +17,21 @@ export class App {
             nav: false,  //Specifies whether the page will be included in the navigation model (e.g. visible in the navigation bar) or not
             title: 'Welcome' //Optional title, will be displayed as part of the document's title
         },
-        { route: 'todos', name: 'todos', moduleId: './todos/todos', nav: true, title: 'To-Do List' },
-        { route: 'login', name: 'login', moduleId: './auth/login', nav: true, title: 'Login' },
-        { route: 'view-info', name: 'view-info', moduleId: './user-info/view-info', nav: false, title: 'View Personal Information' },
-        { route: 'set-info', name: 'set-info', moduleId: './user-info/set-info', nav: false, title: 'Update Personal Information' },
+        // { route: 'todos', name: 'todos', moduleId: './todos/todos', nav: true, title: 'To-Do List' },
+        // { route: 'login', name: 'login', moduleId: './auth/login', nav: true, title: 'Login' },
+        // { route: 'view-info', name: 'view-info', moduleId: './user-info/view-info', nav: false, title: 'View Personal Information' },
+        // { route: 'set-info', name: 'set-info', moduleId: './user-info/set-info', nav: false, title: 'Update Personal Information' },
         { route: 'dialog-demo', name: 'dialog-demo', moduleId: './dialog-demo/dialog-demo', nav: true, title: 'Dialog Demo' },
         { route: 'html-demo', name: 'html-demo', moduleId: './html-only-demo/html-only-demo', nav: true, title: 'HTML Only Elements' },
-        { route: 'contacts-demo', name: 'contacts-demo', moduleId: './contacts-demo/contacts-demo', nav: true, title: 'Contacts Demo' },
-        { route: 'jquery-usage', name: 'jquery-usage', moduleId: './jquery-usage/jquery-usage', nav: true, title: 'jQuery' },
+        // { route: 'contacts-demo', name: 'contacts-demo', moduleId: './contacts-demo/contacts-demo', nav: true, title: 'Contacts Demo' },
+        // { route: 'jquery-usage', name: 'jquery-usage', moduleId: './jquery-usage/jquery-usage', nav: true, title: 'jQuery' },
         { route: 'users', name: 'users', moduleId: './multiple-views/users', nav: true, title: 'Users(Multi Views)' },
         { route: 'form-demo', name: 'form-demo', moduleId: './form-demo/form-demo', nav: true, title: 'Form Demo' },
         { route: 'form-inputs', name: 'form-inputs', moduleId: './form-inputs/form-inputs', nav: true, title: 'More Form Inputs' },
         { route: 'event-demo', name: 'event-demo', moduleId: './event-demo/event-demo', nav: true, title: 'Events Demo' },
         { route: 'users-management', name: 'users', moduleId: 'users/users', nav: true, title: 'Users Management' },
         { route: 'child-router', name: 'child-router', moduleId: './child-router/child-router', nav: true, title: 'Child Router' },
-        { route: 'icon-navigation', name: 'icon-navigation', moduleId: './icon-navigation/icon-navigation', nav: true, title: 'Icon Navigation' }
+        // { route: 'icon-navigation', name: 'icon-navigation', moduleId: './icon-navigation/icon-navigation', nav: true, title: 'Icon Navigation' }
     ]);
 
     this.router = router;
