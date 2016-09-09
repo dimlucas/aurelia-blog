@@ -1,3 +1,14 @@
 <template>
-    
+    <div class="col-md-3 col-md-offset-3">
+        <button class="btn btn-primary" click.trigger="getUsers()">Get Users</button>
+    </div>
+    <div class="col-md-3 col-md-offet3">
+        <div class="row">
+            <input type="number" class="form-control" min="1" max="100" placeholder="User Id" value.bind="userId">
+        </div>
+        <br/>        
+        <div class="row">
+            <button class="btn btn-primary" click.trigger="getUser()">Get User</button>
+        </div>
+    </div>
 </template>
