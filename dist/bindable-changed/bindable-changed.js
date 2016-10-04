@@ -1,0 +1,2 @@
+//# sourceMappingURL=bindable-changed.js.map
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmluZGFibGUtY2hhbmdlZC9iaW5kYWJsZS1jaGFuZ2VkLmpzIiwic291cmNlUm9vdCI6Ii9zcmMiLCJzb3VyY2VzIjpbImJpbmRhYmxlLWNoYW5nZWQvYmluZGFibGUtY2hhbmdlZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIn0=
