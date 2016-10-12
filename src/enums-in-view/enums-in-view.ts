@@ -1,13 +1,8 @@
-import { bindable } from 'aurelia-framework';
 import { FormStatusEnum } from '../enums/form-status-enum';
 
 export class TestEnums{
 
-    @bindable status: FormStatusEnum;
-
-    statusChanged(newValue, oldValue){
-        console.log("Status changed from " + oldValue + " to " + newValue);
-    }
+    status: FormStatusEnum = FormStatusEnum.Ok;
 
     statusOkClicked(): void{
         this.status = FormStatusEnum.Ok;

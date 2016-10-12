@@ -1,8 +1,22 @@
 <template>
-    <require from="../enums-view-engine-hooks/enums-view-engine-hooks"></require>
-    <div class="col-xs-6 col-xs-offset-3">
-        <button class="btn btn-primary" click.trigger="statusOkClicked()">Status Ok</button>
-        <button class="btn btn-primary" click.trigger="statusWarningClicked()">Status Warning</button>
-        <button class="btn btn-primary" click.trigger="statusErrorClicked()">Status Error</button>
-    </div>
+	<require from="../enums-view-engine-hooks/enums-view-engine-hooks"></require>
+	<div class="col-xs-6 col-xs-offset-3">
+		<div class="row" style="margin-bottom: 12px; text-align: center">
+			<button class="btn btn-primary" click.trigger="statusOkClicked()">Status Ok</button>
+			<button class="btn btn-primary" click.trigger="statusWarningClicked()">Status Warning</button>
+			<button class="btn btn-primary" click.trigger="statusErrorClicked()">Status Error</button>
+		</div>
+		<div class="row">
+			<div class="alert alert-success" role="alert" if.bind="status == FormStatusEnum.Ok">
+				<strong>Well done!</strong> Everything is ok! You may proceed
+			</div>
+			<div class="alert alert-warning" role="alert" if.bind="status == FormStatusEnum.Warning">
+				<strong>Warning!</strong> You may proceed but keep in mind this warning
+			</div>
+			<div class="alert alert-danger" role="alert" if.bind="status == FormStatusEnum.Error">
+				<strong>Oh snap!</strong> Somethings seems to have gone wrong. Double check maybe?
+			</div>
+		</div>
+	</div>
+
 </template>
