@@ -32,7 +32,7 @@ export class App {
         { route: 'users-management', name: 'users', moduleId: 'users/users', nav: true, title: 'Users Management' },
         { route: 'child-router', name: 'child-router', moduleId: './child-router/child-router', nav: true, title: 'Child Router' },
         // { route: 'icon-navigation', name: 'icon-navigation', moduleId: './icon-navigation/icon-navigation', nav: true, title: 'Icon Navigation' }
-        { route: 'test-enums', name: 'test-enums', moduleId: './test-enums/test-enums', nav: true, title: 'Test Enums' }
+        { route: 'enums-in-view', name: 'enums-in-view', moduleId: './enums-in-view/enums-in-view', nav: true, title: 'Enums In Views' }
     ]);
 
     this.router = router;
